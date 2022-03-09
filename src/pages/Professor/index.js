@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button, Form } from "react-bootstrap";
 import { render } from "react-dom";
 import { toast } from "react-toastify";
@@ -26,7 +26,7 @@ const columns = [
     {
         value: "departmentId",
         id: "departmentId",
-        render: (departament) => department.name,
+        render: (department) => department.name,
     },
 ];
 
@@ -73,7 +73,7 @@ const actions = [
     {
         name: "Edit",
         action: (_professor) => {
-            setProfessor(_professor_);
+            setProfessor(_professor);
             setVisible(true);
         },
     },
